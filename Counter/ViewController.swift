@@ -12,9 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelCounter: UILabel!
     @IBOutlet weak var buttonCounetr: UIButton!
     
+    func buttonsParametrs(obj: UIButton) {
+            
+            obj.layer.cornerRadius = 10
+            obj.clipsToBounds = true
+            
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        buttonsParametrs(obj: buttonCounetr)
     }
 
     @IBAction func buttonDidTap(_ sender: Any) {
