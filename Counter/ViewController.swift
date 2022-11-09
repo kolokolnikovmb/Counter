@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var counterTimes: Int = 0
-    @IBOutlet weak var labelCounter: UILabel!
-    @IBOutlet weak var buttonCounetr: UIButton!
+    private var counterTimes: Int = 0
+    @IBOutlet private weak var labelCounter: UILabel!
+    @IBOutlet private weak var buttonCounetr: UIButton!
     
-    func buttonsParametrs(obj: UIButton) {
+    func buttonsParameters(obj: UIButton) {
             
             obj.layer.cornerRadius = 10
             obj.clipsToBounds = true
@@ -21,11 +21,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        buttonsParametrs(obj: buttonCounetr)
+        buttonsParameters(obj: buttonCounetr)
     }
 
-    @IBAction func buttonDidTap(_ sender: Any) {
+    @IBAction private func buttonDidTap(_ sender: Any) {
         counterTimes += 1
         labelCounter.text = "Значение счётчика: \(counterTimes)"
     }
